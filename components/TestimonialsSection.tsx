@@ -79,7 +79,7 @@ export function TestimonialsSection() {
               </div>
 
               <p className="text-lg text-muted leading-relaxed mb-6">
-                "{activeTestimonial.content}"
+                &quot;{activeTestimonial.content}&quot;
               </p>
 
               <p className="text-sm text-gray-400 text-right">

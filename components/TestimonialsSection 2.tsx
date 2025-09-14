@@ -56,7 +56,7 @@ export function TestimonialsSection() {
             </div>
 
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              "{mockTestimonials[currentIndex].content}"
+              &quot;{mockTestimonials[currentIndex].content}&quot;
             </p>
 
             <p className="text-sm text-muted">
