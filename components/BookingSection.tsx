@@ -9,8 +9,22 @@ import { Clock, User, Phone, Stethoscope, MessageSquare } from "lucide-react";
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
+// Prop types for the components
+interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  icon: React.ElementType;
+}
+
+interface SelectFieldProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  icon: React.ElementType;
+}
+
+interface TextareaFieldProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  icon: React.ElementType;
+}
+
+
 // 입력 필드 컴포넌트
-const InputField = ({ icon: Icon, ...props }) => (
+const InputField: React.FC<InputFieldProps> = ({ icon: Icon, ...props }) => (
   <div className="relative">
     <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
       <Icon size={20} />
@@ -19,7 +33,7 @@ const InputField = ({ icon: Icon, ...props }) => (
   </div>
 );
 
-const SelectField = ({ icon: Icon, children, ...props }) => (
+const SelectField: React.FC<SelectFieldProps> = ({ icon: Icon, children, ...props }) => (
   <div className="relative">
     <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
       <Icon size={20} />
@@ -30,7 +44,7 @@ const SelectField = ({ icon: Icon, children, ...props }) => (
   </div>
 );
 
-const TextareaField = ({ icon: Icon, ...props }) => (
+const TextareaField: React.FC<TextareaFieldProps> = ({ icon: Icon, ...props }) => (
   <div className="relative">
     <span className="absolute top-3 left-0 flex items-center pl-3 text-gray-400">
       <Icon size={20} />
@@ -173,3 +187,4 @@ export function BookingSection() {
     </section>
   );
 }
+
