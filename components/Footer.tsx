@@ -16,7 +16,7 @@ export function Footer() {
           style={{
             '--grid-min': '280px',
             '--gap': 'var(--space-l)'
-          }}
+          } as React.CSSProperties}
         >
           {/* 로고 및 소개 */}
           <div>
